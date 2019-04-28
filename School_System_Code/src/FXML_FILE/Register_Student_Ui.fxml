@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="border" maxHeight="822.0" maxWidth="1308.0" minHeight="720.0" minWidth="1200.0" prefHeight="720.0" prefWidth="1200.0" stylesheets="@../CssFile/Form_Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_FILE.Register_Student_Controller">
+   <left>
+       <VBox alignment="TOP_CENTER" prefHeight="818.0" prefWidth="300.0" style="-fx-background-color: #F2F1EF;" BorderPane.alignment="CENTER">
+           <HBox alignment="CENTER" prefHeight="199.0" prefWidth="300.0">
+               <VBox.margin>
+                   <Insets top="20.0" />
+               </VBox.margin>
+               <StackPane prefHeight="192.0" prefWidth="193.0" style="-fx-background-color: black;">
+                   <ImageView fx:id="Student_Image" fitHeight="180.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@../Pictures/SamlePic.jpg" />
+                   </ImageView>
+               </StackPane>
+           </HBox>
+           <JFXButton onMouseClicked="#Upload_Photo_Clicked" style="-fx-background-color: white;" text="Upload">
+              <font>
+                  <Font name="Calibri Bold" size="24.0" />
+              </font>
+              <cursor>
+                  <Cursor fx:constant="HAND" />
+              </cursor>
+              <VBox.margin>
+                  <Insets right="150.0" top="20.0" />
+              </VBox.margin>
+           </JFXButton>
+           <Label prefHeight="29.0" prefWidth="217.0" text="School Information">
+              <font>
+                  <Font name="Cabin-Bold" size="24.0" />
+              </font>
+              <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+              </VBox.margin>
+           </Label>
+           <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets />
+               </VBox.margin>
+               <Label prefHeight="35.0" prefWidth="116.0" text="Balance:" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Cabin-Bold" size="24.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="10.0" />
+                   </HBox.margin>
+               </Label>
+               <Label fx:id="Amount" prefHeight="34.0" prefWidth="175.0" text="Amount" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Cabin-Regular" size="20.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets bottom="2.0" />
+                   </HBox.margin>
+               </Label>
+           </HBox>
+           <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets />
+               </VBox.margin>
+               <Label prefHeight="35.0" prefWidth="116.0" text="Credit:" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Cabin-Bold" size="24.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="10.0" />
+                   </HBox.margin>
+               </Label>
+               <Label prefHeight="34.0" prefWidth="175.0" text="Amount" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Cabin-Regular" size="20.0" />
+                   </font>
+               </Label>
+           </HBox>
+           <HBox alignment="CENTER_RIGHT" prefHeight="93.0" prefWidth="270.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="30.0" />
+               </VBox.margin>
+               <JFXButton fx:id="Top_Up_Id" onMouseClicked="#Top_Up_Clicked" style="-fx-background-color: white;" text="Top up">
+                   <font>
+                       <Font name="Calibri Bold" size="24.0" />
+                   </font>
+                   <cursor>
+                       <Cursor fx:constant="HAND" />
+                   </cursor>
+               </JFXButton>
+           </HBox>
+           <VBox alignment="CENTER">
+               <VBox.margin>
+                   <Insets bottom="30.0" top="40.0" />
+               </VBox.margin>
+               <Label prefHeight="29.0" prefWidth="233.0" text="Student Identification">
+                   <font>
+                       <Font name="Cabin-Bold" size="24.0" />
+                   </font>
+               </Label>
+               <Label fx:id="Barcode_ID" alignment="CENTER" prefHeight="100.0" prefWidth="294.0" textAlignment="CENTER">
+                   <font>
+                       <Font name="CCode128_S3_Trial" size="25.0" />
+                   </font>
+               </Label>
+           </VBox>
+       </VBox>
+   </left>
+   <top>
+       <MenuBar prefHeight="0.0" prefWidth="1308.0" BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="File">
+               <MenuItem mnemonicParsing="false" text="Close" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Edit">
+               <MenuItem mnemonicParsing="false" text="Delete" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Help">
+               <MenuItem mnemonicParsing="false" text="About" />
+           </Menu>
+       </MenuBar>
+   </top>
+   <center>
+       <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #F2F1EF;" BorderPane.alignment="CENTER">
+           <Label styleClass="Label_Register" text="Registration Form">
+              <font>
+                  <Font name="Calibri Bold" size="46.0" />
+              </font>
+              <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+              </VBox.margin>
+           </Label>
+           <Separator prefWidth="200.0" style="-fx-background-color: white;" />
+           <Label styleClass="Label_Register" text="Student Information:">
+              <font>
+                  <Font name="Calibri Bold" size="25.0" />
+              </font>
+              <VBox.margin>
+                  <Insets top="15.0" />
+              </VBox.margin>
+           </Label>
+           <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="988.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+               <JFXTextField fx:id="First_Name" focusColor="#3009bf" labelFloat="true" promptText="First Name" styleClass="Register_Form" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="20.0" right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Middle_Name" focusColor="#3009bf" labelFloat="true" promptText="Middle Initial" styleClass="Register_Form" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Last_Name" focusColor="#3009bf" labelFloat="true" promptText="LastName" styleClass="Register_Form" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+               </JFXTextField>
+           </HBox>
+           <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="988.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+               <JFXTextField fx:id="Street_Address" focusColor="#3009bf" labelFloat="true" prefWidth="888.0" promptText="Street Address" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="20.0" />
+                   </HBox.margin>
+               </JFXTextField>
+           </HBox>
+           <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="908.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+               <JFXTextField fx:id="Phone_Number" focusColor="#3009bf" labelFloat="true" promptText="Phone Number" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="20.0" right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Cell_Phone_Number" focusColor="#3009bf" labelFloat="true" promptText="Cell phone number" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Email_Address" focusColor="#3009bf" labelFloat="true" promptText="Email Address" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+               </JFXTextField>
+           </HBox>
+           <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="908.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+            <JFXTextField fx:id="Lrn" focusColor="#3009bf" labelFloat="true" promptText="LRN" unFocusColor="BLACK">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXTextField>
+               <JFXRadioButton fx:id="Male_RadioButton" onMouseClicked="#Male_RadioButton_Clicked" prefHeight="29.0" prefWidth="77.0" selected="true" text="Male">
+                   <HBox.margin>
+                       <Insets left="20.0" right="40.0" />
+                   </HBox.margin>
+                   <font>
+                       <Font name="Cabin-Bold" size="20.0" />
+                   </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Sex" />
+               </toggleGroup>
+               </JFXRadioButton>
+               <JFXRadioButton fx:id="Female_RadioButton" onMouseClicked="#Female_RadioButton_Clicked" prefHeight="32.0" prefWidth="91.0" text="Female" toggleGroup="$Sex">
+                   <HBox.margin>
+                       <Insets right="40.0" />
+                   </HBox.margin>
+                   <font>
+                       <Font name="Cabin-Bold" size="19.0" />
+                   </font>
+               </JFXRadioButton>
+               <Label text="Year Level:">
+                   <font>
+                       <Font name="Calibri Bold Italic" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="10.0" />
+                   </HBox.margin>
+               </Label>
+               <JFXComboBox fx:id="Year_Level_ComboBox" styleClass="ComboBox_Register">
+                   <HBox.margin>
+                       <Insets right="30.0" />
+                   </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               </JFXComboBox>
+               <Label text="Section: ">
+                   <font>
+                       <Font name="Calibri Bold Italic" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="10.0" />
+                   </HBox.margin>
+               </Label>
+               <JFXComboBox fx:id="Section_ComboBox" prefHeight="31.0" prefWidth="169.0" promptText="Anahaw" styleClass="ComboBox_Register">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+           </HBox>
+           <Label text="Family Information:">
+              <font>
+                  <Font name="Calibri Bold" size="25.0" />
+              </font>
+              <VBox.margin>
+                  <Insets top="20.0" />
+              </VBox.margin>
+           </Label>
+           <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="908.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+               <JFXTextField fx:id="Mother_First_Name" focusColor="#3009bf" labelFloat="true" promptText="Mother's First Name" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="20.0" right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Mother_Middle_Name" focusColor="#3009bf" labelFloat="true" promptText="Mother's Middle Name" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Mother_Last_Name" focusColor="#3009bf" labelFloat="true" promptText="Mother's LastName" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               </JFXTextField>
+            <JFXTextField fx:id="Mother_Occupation" focusColor="#3009bf" labelFloat="true" promptText="Mother's Occupation" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+            </JFXTextField>
+           </HBox>
+           <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="908.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+               <JFXTextField fx:id="Father_First_Name" focusColor="#3009bf" labelFloat="true" promptText="Father's First Name" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets left="20.0" right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Father_Middle_Name" focusColor="#3009bf" labelFloat="true" promptText="Father's Middle Name" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="40.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Father_Last_Name" focusColor="#3009bf" labelFloat="true" promptText="Father's LastName" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="20.0" />
+                   </HBox.margin>
+               </JFXTextField>
+               <JFXTextField fx:id="Father_Occupation" focusColor="#3009bf" labelFloat="true" promptText="Father's Occupation" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+                   <font>
+                       <Font name="Calibri Bold" size="21.0" />
+                   </font>
+               </JFXTextField>
+           </HBox>
+           <HBox alignment="CENTER" prefHeight="46.0" prefWidth="908.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                   <Insets right="20.0" />
+               </VBox.margin>
+            <JFXComboBox fx:id="Salary_ComboBox" focusColor="#3009bf" labelFloat="true" prefHeight="20.0" prefWidth="291.0" promptText="Total Monthly Salary" styleClass="ComboBox_Register" unFocusColor="BLACK" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+           </HBox>
+           <HBox alignment="BOTTOM_RIGHT" prefHeight="39.0" prefWidth="908.0">
+               <VBox.margin>
+                   <Insets bottom="30.0" />
+               </VBox.margin>
+               <JFXButton fx:id="Next_Button_ID" onMouseClicked="#Next_Button_Clicked" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: white;" text="Submit">
+                   <font>
+                       <Font name="Calibri Bold" size="24.0" />
+                   </font>
+                   <HBox.margin>
+                       <Insets right="20.0" />
+                   </HBox.margin>
+                   <cursor>
+                       <Cursor fx:constant="HAND" />
+                   </cursor>
+               </JFXButton>
+           </HBox>
+       </VBox>
+   </center>
+</BorderPane>

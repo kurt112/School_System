@@ -1,0 +1,22 @@
+.Register_Form{
+
+    -fx-prompt-text-fill: black;
+}
+
+.Register_Form:focused{
+
+
+}
+
+
+.Label_Register{
+    -fx-text-fill: black;
+}
+
+.ComboBox_Register {
+
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+
+}

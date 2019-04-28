@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<VBox  fx:id="parent" stylesheets="@../CssFile/TableView_Style.css" prefHeight="416.0" prefWidth="772.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_FILE.Library_Controller">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="732.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="List of all Books in Balanti Elementary School" HBox.hgrow="NEVER">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Text>
+                <TextField disable="true" prefHeight="25.0" prefWidth="2.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </TextField>
+                <JFXTextField onKeyPressed="#Search_Table_Pressed" onKeyReleased="#Search_Table" fx:id="Search_TextField" prefHeight="25.0" prefWidth="239.0" promptText="Search anything " unFocusColor="BLACK" HBox.hgrow="NEVER">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </JFXTextField>
+            </children>
+            <VBox.margin>
+                <Insets left="20.0" right="20.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="772.0">
+            <children>
+
+                <fx:define>
+                    <ToggleGroup fx:id="status"/>
+                </fx:define>
+
+                <JFXRadioButton toggleGroup="$status" fx:id="RB_Available" text="Available" onMouseClicked="#Availble_RadioButton_Clicked">
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font>
+
+                </JFXRadioButton>
+
+                <JFXRadioButton toggleGroup="$status" fx:id="RB_Not_Available" text="Not Available" onMouseClicked="#Not_Availble_RadioButton_Clicked">
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font>
+                </JFXRadioButton>
+
+                <JFXComboBox fx:id="Genre_Choice_Box" prefHeight="25.0" prefWidth="147.0" promptText="Book Genre" />
+                <TextField disable="true" prefHeight="25.0" prefWidth="20.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </TextField>
+                <JFXButton fx:id="Add_ID" onMouseClicked="#Add_Book" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #0a6fc2;" text="Add Book" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #0a6fc2;" text="Delete Book" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin></JFXButton>
+            </children>
+        </HBox>
+        <HBox VBox.vgrow="ALWAYS">
+            <children>
+                <TableView styleClass="TableView" onMouseClicked="#Library_Table" fx:id="Library_Table" prefHeight="200.0" prefWidth="772.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="genre" prefWidth="75.0" text="Genre" />
+                        <TableColumn fx:id="title" prefWidth="75.0" text="Title" />
+                        <TableColumn fx:id="author" prefWidth="75.0" text="Author" />
+                        <TableColumn fx:id="publisher" prefWidth="75.0" text="Publisher" />
+                        <TableColumn fx:id="date_published" prefWidth="75.0" text="Date Published"/>
+                        <TableColumn fx:id="edition" prefWidth="75.0" text="Edition"/>
+                        <TableColumn fx:id="path" prefWidth="75.0" text="Location"/>
+                        <TableColumn fx:id="about" prefWidth="75.0" text="About" />
+                        <TableColumn fx:id="pages" prefWidth="75.0" text="No of Pages" />
+                        <TableColumn fx:id="abridged" prefWidth="75.0" text="Abridged" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </HBox>
+      <Accordion />
+    </children>
+</VBox>

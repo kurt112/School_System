@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="parent1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="837.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_FILE.Time_In_Out_Controller">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="647.0" minWidth="0.0" prefWidth="227.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1153.0" minWidth="10.0" prefWidth="252.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1153.0" minWidth="10.0" prefWidth="366.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="561.0" minHeight="0.0" prefHeight="168.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="462.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="464.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="453.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="453.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="453.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="598.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="Name" prefHeight="58.0" prefWidth="575.0" text="Sample_Name" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Label fx:id="Time" prefHeight="83.0" prefWidth="592.0" text="Time _In" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <children>
+            <Label fx:id="Date" prefHeight="83.0" prefWidth="579.0" text="December 10, 2019" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <children>
+            <Label fx:id="Date1" prefHeight="83.0" prefWidth="579.0" text="Grade and Section" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="136.0" prefWidth="295.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <children>
+            <Label fx:id="Date11" prefHeight="83.0" prefWidth="579.0" text="December 10, 2019" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="7">
+         <children>
+            <ImageView fx:id="picture" fitHeight="174.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/SamlePic.jpg" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="285.0" text="Time in :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="276.0" text="Date :" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="268.0" text="Grade and Section :" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="293.0" text="Date :" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="382.0" text="Name :" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" style="-fx-background-color: cyan;" GridPane.columnSpan="3">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/sampleLogo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" prefHeight="156.0" prefWidth="921.0">
+               <children>
+                  <Label text="School Name Sample">
+                     <font>
+                        <Font name="Calibri Bold" size="74.0" />
+                     </font>
+                  </Label>
+                  <Label text=" simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy te">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+</GridPane>

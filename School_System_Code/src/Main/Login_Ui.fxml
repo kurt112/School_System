@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="parent1" alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="991.0" stylesheets="@../CssFile/Login_Style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_FILE.Login_Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="688.0" minWidth="10.0" prefWidth="560.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="772.0" minWidth="10.0" prefWidth="431.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="526.0" prefWidth="431.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowSpan="3">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Pane nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <ImageView fx:id="Logo_Login" fitHeight="158.0" fitWidth="339.0" layoutX="-15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/Login_Logo_Password.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#1e1e1e" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow color="RED" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="Text_Field" labelFloat="true" promptText="UserName" styleClass="Register_Form">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="40.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="Password_Field" labelFloat="true" promptText="Password" styleClass="Register_Form">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="40.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXButton fx:id="Generate_ID" onMouseClicked="#Login" buttonType="RAISED" prefHeight="47.0" prefWidth="397.0" style="-fx-background-color: red;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="40.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <effect>
+            <DropShadow color="RED" />
+         </effect>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="543.0" prefWidth="531.0" style="-fx-background-color: rgba(191, 191, 191, 1);" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <children>
+            <Label textFill="black" text="Sample Message" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="46.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Label>
+            <ImageView fitHeight="207.0" fitWidth="417.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../Pictures/sampleLogo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <Label textFill="black" text="Sample Message">
+                     <font>
+                        <Font name="Calibri Bold" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </children>
+</GridPane>
