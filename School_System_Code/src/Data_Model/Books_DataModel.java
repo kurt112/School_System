@@ -26,9 +26,12 @@ public class Books_DataModel {
     private SimpleStringProperty about = new SimpleStringProperty();
     private SimpleIntegerProperty pages = new SimpleIntegerProperty();
     private SimpleStringProperty abridged = new SimpleStringProperty();
+    private SimpleStringProperty available = new SimpleStringProperty();
 
 
-    public Books_DataModel(int id, String genre,String title, String author, String publisher, String date_published, String edition, String photo,String about, String location,int pages, String abridged) {
+    public Books_DataModel(int id, String genre,String title, String author, String publisher, String date_published, String edition, String photo,String about, String location,int pages, String abridged,String
+                           available) {
+        this.available.set(available);
         this.id.set(id);
         this.genre.set(genre);
         this.title.set(title);
@@ -185,5 +188,17 @@ public class Books_DataModel {
 
     public void setPhoto(String photo) {
         this.photo.set(photo);
+    }
+
+    public String getAvailable() {
+        return available.get();
+    }
+
+    public SimpleStringProperty availableProperty() {
+        return available;
+    }
+
+    public void setAvailable(String available) {
+        this.available.set(available);
     }
 }

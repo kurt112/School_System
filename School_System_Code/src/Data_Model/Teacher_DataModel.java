@@ -14,190 +14,213 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Teacher_DataModel {
 
-    private SimpleIntegerProperty ID = new SimpleIntegerProperty();
-    private SimpleStringProperty First_Name = new SimpleStringProperty();
-    private SimpleStringProperty Middle_Name = new SimpleStringProperty();
-    private SimpleStringProperty Last_Name = new SimpleStringProperty();
-    private SimpleStringProperty Street = new SimpleStringProperty();
-    private SimpleStringProperty Barangay = new SimpleStringProperty();
-    private SimpleStringProperty Municipality = new SimpleStringProperty();
-    private SimpleIntegerProperty Salary = new SimpleIntegerProperty();
-    private SimpleStringProperty Assign_Section = new SimpleStringProperty();
-    private SimpleStringProperty Major = new SimpleStringProperty();
-    private SimpleStringProperty Position = new SimpleStringProperty();
-    private SimpleStringProperty Title = new SimpleStringProperty();
-    private SimpleStringProperty Faculty_Location = new SimpleStringProperty();
+    private SimpleIntegerProperty id = new SimpleIntegerProperty();
+    private SimpleStringProperty first_name = new SimpleStringProperty();
+    private SimpleStringProperty middle_name = new SimpleStringProperty();
+    private SimpleStringProperty last_name = new SimpleStringProperty();
+    private SimpleStringProperty street = new SimpleStringProperty();
+    private SimpleStringProperty barangay = new SimpleStringProperty();
+    private SimpleStringProperty municipality = new SimpleStringProperty();
+    private SimpleStringProperty salary = new SimpleStringProperty();
+    private SimpleStringProperty assign_section = new SimpleStringProperty();
+    private SimpleStringProperty major = new SimpleStringProperty();
+    private SimpleStringProperty position = new SimpleStringProperty();
+    private SimpleStringProperty title = new SimpleStringProperty();
+    private SimpleStringProperty faculty_location = new SimpleStringProperty();
+    private SimpleStringProperty status = new SimpleStringProperty();
 
 
-    public Teacher_DataModel(SimpleIntegerProperty ID, SimpleStringProperty first_Name, SimpleStringProperty middle_Name, SimpleStringProperty last_Name, SimpleStringProperty street, SimpleStringProperty barangay, SimpleStringProperty municipality, SimpleIntegerProperty salary, SimpleStringProperty assign_Section, SimpleStringProperty major, SimpleStringProperty position, SimpleStringProperty title, SimpleStringProperty faculty_Location) {
-        this.ID = ID;
-        First_Name = first_Name;
-        Middle_Name = middle_Name;
-        Last_Name = last_Name;
-        Street = street;
-        Barangay = barangay;
-        Municipality = municipality;
-        Salary = salary;
-        Assign_Section = assign_Section;
-        Major = major;
-        Position = position;
-        Title = title;
-        Faculty_Location = faculty_Location;
+    public Teacher_DataModel(int id, String first_name, String middle_name,String last_name, String street,String barangay, String municipality, String salary, String assign_section, String major, String position, String title, String faculty_location,
+                             String status) {
+
+        this.id.set(id);
+        this.title.set(title);
+        this.status.set(status);
+
+        this.first_name.set(first_name);
+        this.middle_name.set(middle_name);
+        this.last_name.set(last_name);
+
+        this.street.set(street);
+        this.barangay.set(barangay);
+        this.municipality.set(municipality);
+
+        this.salary.set(salary);
+        this.assign_section.set(assign_section);
+        this.major.set(major);
+        this.position.set(position);
+
+
+        this.faculty_location.set(faculty_location);
+
     }
 
-    public int getID() {
-        return ID.get();
+
+    public int getId() {
+        return id.get();
     }
 
-    public SimpleIntegerProperty IDProperty() {
-        return ID;
+    public SimpleIntegerProperty idProperty() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID.set(ID);
+    public void setId(int id) {
+        this.id.set(id);
     }
 
-    public String getFirst_Name() {
-        return First_Name.get();
+    public String getFirst_name() {
+        return first_name.get();
     }
 
-    public SimpleStringProperty first_NameProperty() {
-        return First_Name;
+    public SimpleStringProperty first_nameProperty() {
+        return first_name;
     }
 
-    public void setFirst_Name(String first_Name) {
-        this.First_Name.set(first_Name);
+    public void setFirst_name(String first_name) {
+        this.first_name.set(first_name);
     }
 
-    public String getMiddle_Name() {
-        return Middle_Name.get();
+    public String getMiddle_name() {
+        return middle_name.get();
     }
 
-    public SimpleStringProperty middle_NameProperty() {
-        return Middle_Name;
+    public SimpleStringProperty middle_nameProperty() {
+        return middle_name;
     }
 
-    public void setMiddle_Name(String middle_Name) {
-        this.Middle_Name.set(middle_Name);
+    public void setMiddle_name(String middle_name) {
+        this.middle_name.set(middle_name);
     }
 
-    public String getLast_Name() {
-        return Last_Name.get();
+    public String getLast_name() {
+        return last_name.get();
     }
 
-    public SimpleStringProperty last_NameProperty() {
-        return Last_Name;
+    public SimpleStringProperty last_nameProperty() {
+        return last_name;
     }
 
-    public void setLast_Name(String last_Name) {
-        this.Last_Name.set(last_Name);
+    public void setLast_name(String last_name) {
+        this.last_name.set(last_name);
     }
 
     public String getStreet() {
-        return Street.get();
+        return street.get();
     }
 
     public SimpleStringProperty streetProperty() {
-        return Street;
+        return street;
     }
 
     public void setStreet(String street) {
-        this.Street.set(street);
+        this.street.set(street);
     }
 
     public String getBarangay() {
-        return Barangay.get();
+        return barangay.get();
     }
 
     public SimpleStringProperty barangayProperty() {
-        return Barangay;
+        return barangay;
     }
 
     public void setBarangay(String barangay) {
-        this.Barangay.set(barangay);
+        this.barangay.set(barangay);
     }
 
     public String getMunicipality() {
-        return Municipality.get();
+        return municipality.get();
     }
 
     public SimpleStringProperty municipalityProperty() {
-        return Municipality;
+        return municipality;
     }
 
     public void setMunicipality(String municipality) {
-        this.Municipality.set(municipality);
+        this.municipality.set(municipality);
     }
 
-    public int getSalary() {
-        return Salary.get();
+    public String getAssign_section() {
+        return assign_section.get();
     }
 
-    public SimpleIntegerProperty salaryProperty() {
-        return Salary;
+    public SimpleStringProperty assign_sectionProperty() {
+        return assign_section;
     }
 
-    public void setSalary(int salary) {
-        this.Salary.set(salary);
-    }
-
-    public String getAssign_Section() {
-        return Assign_Section.get();
-    }
-
-    public SimpleStringProperty assign_SectionProperty() {
-        return Assign_Section;
-    }
-
-    public void setAssign_Section(String assign_Section) {
-        this.Assign_Section.set(assign_Section);
+    public void setAssign_section(String assign_section) {
+        this.assign_section.set(assign_section);
     }
 
     public String getMajor() {
-        return Major.get();
+        return major.get();
     }
 
     public SimpleStringProperty majorProperty() {
-        return Major;
+        return major;
     }
 
     public void setMajor(String major) {
-        this.Major.set(major);
+        this.major.set(major);
     }
 
     public String getPosition() {
-        return Position.get();
+        return position.get();
     }
 
     public SimpleStringProperty positionProperty() {
-        return Position;
+        return position;
     }
 
     public void setPosition(String position) {
-        this.Position.set(position);
+        this.position.set(position);
     }
 
     public String getTitle() {
-        return Title.get();
+        return title.get();
     }
 
     public SimpleStringProperty titleProperty() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        this.Title.set(title);
+        this.title.set(title);
     }
 
-    public String getFaculty_Location() {
-        return Faculty_Location.get();
+    public String getFaculty_location() {
+        return faculty_location.get();
     }
 
-    public SimpleStringProperty faculty_LocationProperty() {
-        return Faculty_Location;
+    public SimpleStringProperty faculty_locationProperty() {
+        return faculty_location;
     }
 
-    public void setFaculty_Location(String faculty_Location) {
-        this.Faculty_Location.set(faculty_Location);
+    public void setFaculty_location(String faculty_location) {
+        this.faculty_location.set(faculty_location);
+    }
+
+    public String getSalary() {
+        return salary.get();
+    }
+
+    public SimpleStringProperty salaryProperty() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary.set(salary);
+    }
+
+    public String getStatus() {
+        return status.get();
+    }
+
+    public SimpleStringProperty statusProperty() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status.set(status);
     }
 }

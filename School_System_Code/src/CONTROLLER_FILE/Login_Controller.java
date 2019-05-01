@@ -1,5 +1,6 @@
 package CONTROLLER_FILE;
 
+import Alerts.AlertType;
 import DataBase.DataBase_Commands;
 import FXML_FILE.LoadFxml;
 import com.jfoenix.controls.JFXButton;
@@ -15,6 +16,8 @@ import javafx.scene.layout.GridPane;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
+
 /**
  * Created by Kurt Lupin C. Orioque
  * Email Address: kurtorioque112@gmail.com
@@ -32,7 +35,8 @@ public class Login_Controller {
     @FXML private JFXTextField Text_Field;
     @FXML private JFXPasswordField Password_Field;
     @FXML private ImageView Logo_Login;
-    public void initialize() {
+    public void initialize(){
+        DataBase_Commands.Teacher_Table_Query();
 
         Password_Field.focusedProperty().addListener((observableValue, aBoolean, t1) -> {
             if(t1){
@@ -54,7 +58,7 @@ public class Login_Controller {
 
     }
 
-    public void Login() throws IOException {
+    public void Login(){
 
 //       loadFxml.Register_Student(Generate_ID);
         loadFxml.Load_DashBoard(Generate_ID);

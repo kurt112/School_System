@@ -42,10 +42,8 @@ public class Library_Controller {
 
     @FXML private TableView<Books_DataModel> Library_Table;
     @FXML private TableColumn<Books_DataModel,String> genre,
-            title,author,publisher,date_published,edition,path;
-
-    @FXML private TableColumn<Books_DataModel,String> about;
-    @FXML private TableColumn<Books_DataModel,String> abridged;
+            title,author,publisher,date_published,edition,path
+            ,about,availability,abridged;
 
     @FXML private JFXRadioButton RB_Available, RB_Not_Available;
 
@@ -53,10 +51,10 @@ public class Library_Controller {
 
     @FXML private JFXTextField Search_TextField;
 
-    @FXML private TableColumn<Books_DataModel,Integer> pages,No_Copy;
+    @FXML private TableColumn<Books_DataModel,Integer> pages;
     FilteredList filter  = new FilteredList(DataBase_Commands.getBooks(),e -> true);
     @FXML private VBox parent;
-    @FXML private JFXButton Add_ID;
+//    @FXML private JFXButton Add_ID;
     private FXMLLoader fxmlLoader;
     private Stage stage;
 
@@ -65,72 +63,77 @@ public class Library_Controller {
     String value = "null";
 
     public void initialize() throws SQLException {
-
-
+        pages.setVisible(false);
+        abridged.setVisible(false);
+        about.setVisible(false);
+        edition.setVisible(false);
+        date_published.setVisible(false);
+        publisher.setVisible(false);
         DataBase_Commands.getBooks().clear();
-
+        Add_Item_TableView();
         RB_Available.setSelected(true);
         setCellValue();
-        Add_Item_TableView();
+//        Add_Item_TableView();
         Add_Genre();
-
+        System.out.println("youw");
         Genre_Choice_Box.valueProperty().addListener((observableValue, o, t1) -> {
-            
-            try {
+
+
                 if(Genre_Choice_Box.getValue()== null || Genre_Choice_Box.getValue().equals("All")){
 
                     value = "null";
 
-                }else {
+                   }else {
                     value = Genre_Choice_Box.getValue();
 
                 }
                 Search_TextField.setText("");
                 Add_Item_TableView();
 
-            }catch (SQLException e){
-                e.printStackTrace();
-            }
+
         });
 
 
     }
 
-    public void Add_Item_TableView() throws SQLException{
+    public void Add_Item_TableView(){
 
         Library_Table.setItems(DataBase_Commands.get_Books(value,number));
 
 
     }
 
-
-    public void Add_Genre() throws SQLException{
-
-        Genre_Choice_Box.setItems(DataBase_Commands.Book_Genre_Item());
+    public void Add_Genre() {
+        System.out.println("im excuted");
+        DataBase_Commands.Book_Genre_Item();
+        DataBase_Commands.getBook_Genre_Item().add("All");
+        Genre_Choice_Box.setItems(DataBase_Commands.getBook_Genre_Item());
 
     }
 
-    public void setCellValue(){
+    private void setCellValue(){
         genre.setCellValueFactory(new PropertyValueFactory<>("genre"));
         title.setCellValueFactory(new PropertyValueFactory<>("title"));
         author.setCellValueFactory(new PropertyValueFactory<>("author"));
         publisher.setCellValueFactory(new PropertyValueFactory<>("publisher"));
         date_published.setCellValueFactory(new PropertyValueFactory<>("date_published"));
         edition.setCellValueFactory(new PropertyValueFactory<>("edition"));
-        path.setCellValueFactory(new PropertyValueFactory<>("location"));
         about.setCellValueFactory(new PropertyValueFactory<>("about"));
+        path.setCellValueFactory(new PropertyValueFactory<>("location"));
         pages.setCellValueFactory(new PropertyValueFactory<>("pages"));
         abridged.setCellValueFactory(new PropertyValueFactory<>("abridged"));
+        availability.setCellValueFactory(new PropertyValueFactory<>("available"));
     }
 
 
-   @FXML public void Library_Table(MouseEvent mouseEvent) {
+   @FXML public void Library_Table(MouseEvent mouseEvent) throws IOException{
 
         Books_DataModel books_dataModel = Library_Table.getSelectionModel().getSelectedItem();
 
         if(mouseEvent.getClickCount() == 2){
 
-            
+            LoadFxml loadFxml = new LoadFxml();
+            loadFxml.BookRegister_Aler_Update(parent,books_dataModel);
 
         }
 
@@ -185,7 +188,7 @@ public class Library_Controller {
 
 
     }
-    public void Search_Table_Pressed(KeyEvent keyEvent){
+    @FXML public void Search_Table_Pressed(){
 
         Search_TextField.textProperty().addListener((observableValue, newValue, oldValue) -> {
 
@@ -269,10 +272,13 @@ public class Library_Controller {
 
     }
     private String BookRegister_Alert = "BookRegister_Ui.fxml";
-    @FXML public void Add_Book() throws IOException {
+    @FXML public void Add_Book(){
 
         LoadFxml loadFxml = new LoadFxml();
-        loadFxml.BookRegister_Alert(Add_ID);
+
+        loadFxml.BookRegister_Alert(parent);
+
+//        loadFxml.BookRegister_Alert(parent.getParent());
 
     }
 

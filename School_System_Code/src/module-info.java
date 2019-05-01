@@ -9,23 +9,28 @@ module Barcode {
     requires javafx.swing;
 
 
+
     //For UI
     requires com.jfoenix;
 //    requires ConnectCodeBarcodeFontLibrary;
     //requires fontawesomefx;
+
     //Jar to Db
     requires sqlite.jdbc;
     requires java.sql;
-
+    //requires javafx.controls.com.sun.javafx.scene.control.behavior;
 
     //I created Packages
-    opens Pictures;
 
+    opens Pictures;
     opens Main;
     opens Data_Model;
     opens CONTROLLER_FILE;
     opens CssFile;
     opens DataBase;
     opens FXML_FILE;
+    opens Alerts;
+
+
 
 }

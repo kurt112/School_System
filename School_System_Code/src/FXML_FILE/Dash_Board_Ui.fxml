@@ -118,9 +118,9 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </HBox>
-                <HBox onMouseExited="#Guidance_MouseExited" onMouseEntered="#Guidance_MouseEntered" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" onMouseEntered="#Guidance_MouseEntered" onMouseExited="#Guidance_MouseExited" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                     <children>
-                        <Pane onMouseClicked="#Goto_Guidance" fx:id="Guidance_Button" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
+                        <Pane fx:id="Guidance_Button" onMouseClicked="#Goto_Guidance" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
                         <Label fx:id="Guidance_ID" prefWidth="155.0" style="-fx-text-fill: black;" text="Guidance">
                             <font>
                                 <Font name="Arial Bold" size="22.0" />
@@ -137,9 +137,9 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </HBox>
-                <HBox onMouseEntered="#Library_MouseEntered" onMouseExited="#Library_MouseExited" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" onMouseEntered="#Library_MouseEntered" onMouseExited="#Library_MouseExited" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                     <children>
-                        <Pane  onMouseClicked="#Goto_Library" fx:id="Library_Button" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
+                        <Pane fx:id="Library_Button" onMouseClicked="#Goto_Library" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
                         <Label fx:id="Library_ID" prefWidth="155.0" style="-fx-text-fill: black;" text="Library">
                             <font>
                                 <Font name="Arial Bold" size="22.0" />
@@ -156,9 +156,9 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </HBox>
-                <HBox onMouseExited="#Canteen_MouseExited" onMouseEntered="#Canteen_MouseEntered" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" onMouseEntered="#Canteen_MouseEntered" onMouseExited="#Canteen_MouseExited" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                     <children>
-                        <Pane onMouseClicked="#Goto_Canteen" fx:id="Canteen_Button" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
+                        <Pane fx:id="Canteen_Button" onMouseClicked="#Goto_Canteen" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
                         <Label fx:id="Canteen_ID" prefWidth="155.0" style="-fx-text-fill: black;" text="Canteen">
                             <font>
                                 <Font name="Arial Bold" size="22.0" />
@@ -175,9 +175,9 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </HBox>
-                <HBox onMouseEntered="#SendMessage_MouseEntered" onMouseExited="#SendMessage_MouseExited" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" onMouseEntered="#SendMessage_MouseEntered" onMouseExited="#SendMessage_MouseExited" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                     <children>
-                        <Pane onMouseClicked="#Goto_SendMessage" fx:id="SendMessage_Button" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
+                        <Pane fx:id="SendMessage_Button" onMouseClicked="#Goto_SendMessage" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
                         <Label fx:id="SendMessage_ID" prefWidth="155.0" style="-fx-text-fill: black;" text="Send Message">
                             <font>
                                 <Font name="Arial Bold" size="22.0" />
@@ -194,9 +194,28 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </HBox>
-                <HBox onMouseEntered="#Logout_MouseEntered" onMouseExited="#Logout_MouseExited" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" onMouseEntered="#SendMessage_MouseEntered" onMouseExited="#SendMessage_MouseExited" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Pane fx:id="SendMessage_Button1" onMouseClicked="#Goto_SendMessage" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
+                  <Label fx:id="SendMessage_ID1" prefWidth="155.0" style="-fx-text-fill: black;" text="Section List">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+                <HBox alignment="CENTER_LEFT" onMouseEntered="#Logout_MouseEntered" onMouseExited="#Logout_MouseExited" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                     <children>
-                        <Pane onMouseClicked="#Goto_Logout" fx:id="Logout_Button" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
+                        <Pane fx:id="Logout_Button" onMouseClicked="#Goto_Logout" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: #0a6fc2;" />
                         <Label fx:id="Logout_ID" prefWidth="155.0" style="-fx-text-fill: black;" text="Logout">
                             <font>
                                 <Font name="Arial Bold" size="22.0" />

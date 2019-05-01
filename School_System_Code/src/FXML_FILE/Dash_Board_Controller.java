@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
@@ -19,19 +18,19 @@ import java.io.IOException;
 public class Dash_Board_Controller {
 
 
-    /**
-     *Name of Vbox Item Changing
-     */
+//    /**
+//     *Name of Vbox Item Changing
+//     */
     @FXML private VBox Vbox_Change;
-    /**
-     *End of Name of Vbox Item Changing
-     */
+//    /**
+//     *End of Name of Vbox Item Changing
+//     */
 
-    /**
-     *
-     * Declaring of Path of Ui
-     *
-     */
+//    /**
+//     *
+//     * Declaring of Path of Ui
+//     *
+//     */
     private final String DashBoardItem_Statistic = "Dash_Board_Item_1(statistic).fxml";
     private final String Student_List_Ui = "Student_List_Ui.fxml";
     private final String Teacher_List_Ui = "Teacher_List_Ui.fxml";
@@ -40,17 +39,17 @@ public class Dash_Board_Controller {
     private final String SendMessage_Ui = "SendMessage_List_Ui.fxml";
     private final String Guidance_Ui = "Guidance_Ui.fxml";
 
-    /**
-     *
-     * End Declaring of Path of Ui
-     *
-     */
+//    /**
+//     *
+//     * End Declaring of Path of Ui
+//     *
+//     */
 
 
 
-    /**
-     * Declaring of Runnable Ui
-     */
+//    /**
+//     * Declaring of Runnable Ui
+//     */
 
     private Runnable Statistic_Item_Ui_Runnable = () -> Platform.runLater(() -> Dash_Board_Item(DashBoardItem_Statistic));
     private Runnable Student_List_Ui_Runnable = () -> Platform.runLater(() -> Dash_Board_Item(Student_List_Ui));
@@ -60,33 +59,33 @@ public class Dash_Board_Controller {
     private Runnable SendMessage_Ui_Runnable = () -> Platform.runLater(() -> Dash_Board_Item(SendMessage_Ui));
     private Runnable Guidance_Ui_Runnable = () -> Platform.runLater(() -> Dash_Board_Item(Guidance_Ui));
 
-    /**
-     * End of Declaring Runnable
-     */
+//    /**
+//     * End of Declaring Runnable
+//     */
 
 
-    /**
-     * Declaring of Label in Ui
-     */
+//    /**
+//     * Declaring of Label in Ui
+//     */
     @FXML private Label StudentList_ID, TeacherList_ID,Home_ID, Guidance_ID,Library_ID,Canteen_ID,SendMessage_ID,Logout_ID;
 
-    /**
-     * End of Declaring of Label in Ui
-     */
+//    /**
+//     * End of Declaring of Label in Ui
+//     */
 
 
-    /**
-     * Declaring of Pane in Ui
-     */
+//    /**
+//     * Declaring of Pane in Ui
+//     */
     @FXML private Pane StudentList_Button, TeacherList_Button, Home_Button,Guidance_Button,
                         Library_Button,Canteen_Button,SendMessage_Button,Logout_Button;
-    /**
-     * End of Declaring of Pane in Ui
-     */
+//    /**
+//     * End of Declaring of Pane in Ui
+//     */
 
     private Thread New_Thread(Runnable runnable){
-        Thread thread = new Thread(runnable);
-        return thread;
+
+        return new Thread(runnable);
     }
 
 
@@ -97,18 +96,18 @@ public class Dash_Board_Controller {
 
     }
 
-    /**
-     *
-     *
-     *
-     *
-     * Start of Changing item in Vbox
-     *
-     *
-     *
-     *
-     *
-     */
+//    /**
+//     *
+//     *
+//     *
+//     *
+//     * Start of Changing item in Vbox
+//     *
+//     *
+//     *
+//     *
+//     *
+//     */
 
     private void Dash_Board_Item(String path){
 
@@ -120,50 +119,49 @@ public class Dash_Board_Controller {
 
     private VBox New_Vbox(String path){
 
-        VBox vBox = null;
+//        VBox vBox = null;
 
         try {
 
-            vBox = FXMLLoader.load(getClass().getResource(path));
-            return vBox;
+
+            return (VBox)FXMLLoader.load(getClass().getResource(path));
 
         }catch (IOException e){
             e.printStackTrace();
         }
 
-        return vBox;
+        return null;
 
     }
 
-    /**
-     *
-     *
-     *
-     *
-     * End of Changing item in Vbox
-     *
-     *
-     *
-     *
-     *
-     */
+//    *
+//     *
+//     *
+//     *
+//     *
+//     * End of Changing item in Vbox
+//     *
+//     *
+//     *
+//     *
+//     *
 
 
-    /**
-     *
-     *
-     *
-     *
-     *
-     *
-     * Start of Function Button
-     *
-     *
-     *
-     *
-     *
-     *
-     */
+//    /**
+//     *
+//     *
+//     *
+//     *
+//     *
+//     *
+//     * Start of Function Button
+//     *
+//     *
+//     *
+//     *
+//     *
+//     *
+//     */
 
     @FXML public void Goto_TeacherList() {
 
@@ -207,34 +205,34 @@ public class Dash_Board_Controller {
     }
 
 
-    /**
-     *
-     *
-     *
-     *
-     * End of Function Button
-     *
-     *
-     *
-     *
-     */
+//    /**
+//     *
+//     *
+//     *
+//     *
+//     * End of Function Button
+//     *
+//     *
+//     *
+//     *
+//     */
 
 
-    /**
-     *
-     *
-     *
-     *
-     *
-     *
-     * Start of Design Button
-     *
-     *
-     *
-     *
-     *
-     *
-     */
+//    /**
+//     *
+//     *
+//     *
+//     *
+//     *
+//     *
+//     * Start of Design Button
+//     *
+//     *
+//     *
+//     *
+//     *
+//     *
+//     */
 
     @FXML public void Teacher_MouseExited() {
 
@@ -249,7 +247,7 @@ public class Dash_Board_Controller {
         TeacherList_Button.setPrefWidth(300);
 
     }
-
+    
     @FXML public void Student_MouseExited() {
 
         StudentList_ID.setText("Student List");
@@ -285,59 +283,59 @@ public class Dash_Board_Controller {
         Guidance_Button.setPrefWidth(300);
     }
 
-    @FXML public void Library_MouseEntered(MouseEvent mouseEvent) {
+    @FXML public void Library_MouseEntered() {
         Library_ID.setText("");
         Library_Button.setPrefWidth(300);
     }
 
-    @FXML public void Library_MouseExited(MouseEvent mouseEvent) {
+    @FXML public void Library_MouseExited() {
         Library_ID.setText("Library");
         Library_Button.setPrefWidth(33);
     }
 
-    @FXML public void Canteen_MouseEntered(MouseEvent mouseEvent) {
+    @FXML public void Canteen_MouseEntered() {
         Canteen_ID.setText("");
         Canteen_Button.setPrefWidth(300);
     }
 
-    @FXML public void Canteen_MouseExited(MouseEvent mouseEvent) {
+    @FXML public void Canteen_MouseExited() {
         Canteen_ID.setText("Canteen");
         Canteen_Button.setPrefWidth(33);
     }
 
 
-    @FXML public void SendMessage_MouseEntered(MouseEvent mouseEvent) {
+    @FXML public void SendMessage_MouseEntered() {
         SendMessage_ID.setText("");
         SendMessage_Button.setPrefWidth(300);
     }
 
-    @FXML public void SendMessage_MouseExited(MouseEvent mouseEvent) {
+    @FXML public void SendMessage_MouseExited() {
         SendMessage_ID.setText("Send Message");
         SendMessage_Button.setPrefWidth(33);
     }
 
-    @FXML public void Logout_MouseEntered(MouseEvent mouseEvent) {
+    @FXML public void Logout_MouseEntered() {
         Logout_ID.setText("");
         Logout_Button.setPrefWidth(300);
     }
 
-    @FXML  public void Logout_MouseExited(MouseEvent mouseEvent) {
+    @FXML  public void Logout_MouseExited() {
         Logout_ID.setText("Logout");
         Logout_Button.setPrefWidth(33);
     }
 
-    /**
-     *
-     *
-     *
-     *
-     *
-     * End of Deisgn Button
-     *
-     *
-     *
-     *
-     */
+//    /**
+//     *
+//     *
+//     *
+//     *
+//     *
+//     * End of Deisgn Button
+//     *
+//     *
+//     *
+//     *
+//     */
 
 
 
